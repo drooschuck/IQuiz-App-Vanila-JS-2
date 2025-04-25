@@ -1,2 +1,1 @@
-# IQuiz-App-Vanila-JS-2
-Y7 Quiz App 
+IQuiz-App-Vanila-JS - Year 7 Quiz 
