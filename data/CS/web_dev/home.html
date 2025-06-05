@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home - My Website</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    header {
+      background-color: #2a7ae2;
+      padding: 15px 20px;
+      color: white;
+    }
+    nav {
+      display: flex;
+      background-color: #1e5bb8;
+      padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      margin-right: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      font-weight: 600;
+    }
+    nav a:hover, nav a.active {
+      background-color: #155aab;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+  <nav>
+    <a href="home.html" class="active" aria-label="Home">Home</a>
+    <a href="about.html" aria-label="About">About</a>
+    <a href="services.html" aria-label="Services">Services</a>
+    <a href="contact.html" aria-label="Contact">Contact</a>
+  </nav>
+  <main>
+    <h2>Welcome to the Home Page</h2>
+    <p>This is the home page of the website, welcoming visitors and giving an overview.</p>
+  </main>
+</body>
+</html>

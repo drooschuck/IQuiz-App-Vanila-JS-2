@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Navigation Page</title>
+  <style>
+    /* General page styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    header {
+      background-color: #2a7ae2;
+      padding: 15px 20px;
+      color: white;
+    }
+
+    /* Navigation bar styles */
+    nav {
+      display: flex;
+      background-color: #1e5bb8;
+      padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      margin-right: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      font-weight: 600;
+    }
+    nav a:hover {
+      background-color: #155aab;
+    }
+
+    /* Content styles */
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+
+ <nav>
+    <a href="simple_navigation_page.html" class="active" aria-label="Home">Home</a>
+    <a href="about.html" aria-label="About">About</a>
+    <a href="services.html" aria-label="Services">Services</a>
+    <a href="contact.html" aria-label="Contact">Contact</a>
+  </nav>
+
+  <main>
+    <h2>Welcome to the Simple Navigation Page</h2>
+    <p>This page demonstrates a simple navigation system created using HTML and styled with CSS.</p>
+    <p>Use the navigation links above to explore different sections of the website.</p>
+  </main>
+</body>
+</html>

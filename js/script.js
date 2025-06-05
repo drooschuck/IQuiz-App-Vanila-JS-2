@@ -1,33 +1,230 @@
-// Function to dynamically import questions based on the current date
-async function loadQuestions() {
-    const today = new Date();
-    const dateString = today.toISOString().split('T')[0]; // Format: YYYY-MM-DD
-    //const dateString = "2025-04-28"; // Change this to a date that has a corresponding questions file
-    const filePath = `../data/Sc/Y9_Sc_Pt3_${dateString}.js`; // Adjust the path as necessary
+/* Function to set the subject in the quiz header */
+let quizSubject = ""; // Initialize quizSubject variable
+
+function setSubject() {
+    const subjectElem = document.querySelector('.subject');
+    subjectElem.textContent = 'Sub: ' + quizSubject; // Use the quiz subject
+}
+
+/* Function to dynamically import questions and subject based on a specific or current date and subject */
+async function loadQuestions(subject, dateString) {
+    if (!dateString) {
+        const today = new Date();
+        dateString = today.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+    }
+
+    let filePath = "";
+
+    switch(subject) {
+        case "Phy":
+            filePath = `../data/Sc/Phys/Y9_Sc_Phy_${dateString}.js`;
+            break;
+        case "Chem":
+            filePath = `../data/Sc/Chem/Y9_Sc_Chem_${dateString}.js`;
+            break;
+        case "Biol":
+            filePath = `../data/Sc/Biol/Y9_Sc_biol_${dateString}.js`;
+            break;
+        case "Math":
+            filePath = `../data/math/Y9_Math_${dateString}.js`;
+            break;
+        case "CS":
+            filePath = `../data/CS/Y9_Cs_${dateString}.js`;
+            break;
+        case "Eng":
+            filePath = `../data/Eng/Y9_Eng_${dateString}.js`;
+            break;
+        default:
+            throw new Error("Invalid subject specified");
+    }
+
+    let questions = [];
+    let localQuizSubject = "KS3"; // Default subject
 
     try {
         const module = await import(filePath);
-        return module.questions; // Assuming the questions are exported as 'questions'
+        console.log(`Successfully loaded questions from ${filePath}`);
+        localQuizSubject = module.quizSubject || localQuizSubject; // Update quizSubject if available
+        questions = module.questions || [];
     } catch (error) {
         console.error(`Error loading questions from ${filePath}:`, error);
-        // Fallback to a default set of questions or handle the error as needed
-        return []; // Return an empty array or a default set of questions
+        showFileNotFoundError();
+    }
+
+    return {
+        questions: questions,
+        quizSubject: localQuizSubject
+    };
+}
+
+function showFileNotFoundError() {
+    // Hide all other boxes
+    info_box.classList.remove("activeInfo");
+    quiz_box.classList.remove("activeQuiz");
+    result_box.classList.remove("activeResult");
+
+    // Show error box or create one dynamically
+    let errorBox = document.querySelector(".error_box");
+    if (!errorBox) {
+        errorBox = document.createElement("div");
+        errorBox.className = "error_box";
+        errorBox.style.cssText = "position: fixed; top: 20%; left: 50%; transform: translateX(-50%); background: #f8d7da; color: #721c24; padding: 20px; border: 1px solid #f5c6cb; border-radius: 5px; z-index: 1000; max-width: 300px; text-align: center;";
+        errorBox.innerHTML = `
+            <p>Question file not found for the selected subject.</p>
+            <button class="back_to_menu_btn">Back to Main Menu</button>
+        `;
+        document.body.appendChild(errorBox);
+
+        const backBtn = errorBox.querySelector(".back_to_menu_btn");
+        backBtn.addEventListener("click", () => {
+            errorBox.remove();
+            showWelcomeMenu();
+        });
+    } else {
+        errorBox.style.display = "block";
     }
 }
 
-// Load questions when the script runs
-let quizQuestions = []; // Renamed from questions to quizQuestions
-loadQuestions().then(loadedQuestions => {
-    quizQuestions = loadedQuestions; // Use the renamed variable
+function showWelcomeMenu() {
+    // Show welcome message container
+    const welcomeMessage = document.querySelector('.welcome_message');
+    if (welcomeMessage) welcomeMessage.style.display = 'block';
+
+    // Show subject selection dropdown and label by removing inline display style
+    const subjectLabel = document.querySelector('label[for="subjectSelect"]');
+    if (subjectLabel) subjectLabel.style.display = '';
+    if (subjectSelect) subjectSelect.style.display = '';
+
+    // Reset subject selection dropdown to placeholder
+    subjectSelect.value = "";
+    selectedSubject = "";
+    updateWelcomeTitle(selectedSubject);
+
+    // Enable start button if disabled
+    startBtn.disabled = true;
+}
+
+/* Load questions for specific Date */
+/*loadQuestions("2025-05-00").then(({ questions, quizSubject: loadedSubject }) => {
+    quizQuestions = questions;
+    quizSubject = loadedSubject; // Assign to global quizSubject
+    setSubject(); // Set the subject after loading
     initializeQuiz();
+}); */
+
+/* Load questions for the current Date and subject */
+let quizQuestions = [];
+let selectedSubject = ""; // Default subject, can be changed to "Chem" or "Biol"
+
+const subjectSelect = document.getElementById("subjectSelect");
+const welcomeTitle = document.getElementById("welcomeTitle");
+const startBtn = document.querySelector(".start_btn button");
+
+// Disable start button initially
+startBtn.disabled = true;
+
+// Enable start button only when a valid subject is selected
+subjectSelect.addEventListener("change", (e) => {
+    selectedSubject = e.target.value;
+    updateWelcomeTitle(selectedSubject);
+    startBtn.disabled = !selectedSubject;
+
+    // Remove notification if present when user selects a subject
+    let notification = document.querySelector(".subject-notification");
+    if (notification) {
+        console.log("Removing subject selection notification");
+        notification.remove();
+    }
 });
 
-let  start_btn = document.querySelector(".start_btn button");
-let  info_box = document.querySelector(".info_box");
-let  exit_btn = info_box.querySelector(".buttons .quit");
-let  continue_btn = info_box.querySelector(".buttons .restart");
-let  quiz_box = document.querySelector(".quiz_box");
-let  result_box = document.querySelector(".result_box");
+// Update welcome title based on selected subject
+function updateWelcomeTitle(subject) {
+    let subjectName = "";
+    switch(subject) {
+        case "Phy":
+            subjectName = "Physics";
+            break;
+        case "Chem":
+            subjectName = "Chemistry";
+            break;
+        case "Biol":
+            subjectName = "Biology";
+            break;
+        case "CS":
+            subjectName = "Computer Science";
+            break;
+        case "Math":
+            subjectName = "Maths";
+            break;
+        case "Eng":
+            subjectName = "English";
+            break;
+        default:
+            subjectName = "KS3";
+    }
+    welcomeTitle.textContent = `Welcome to Year 7 ${subjectName} Quiz`;
+}
+
+// Load quiz for selected subject and date
+async function loadQuizForSubject(subject) {
+    const { questions, quizSubject: loadedSubject } = await loadQuestions(subject);
+    quizQuestions = questions;
+    quizSubject = loadedSubject;
+    setSubject();
+    initializeQuiz();
+}
+
+// Listen for subject selection change
+subjectSelect.addEventListener("change", (e) => {
+    selectedSubject = e.target.value;
+    updateWelcomeTitle(selectedSubject);
+});
+
+// Start quiz button click handler
+startBtn.addEventListener("click", () => {
+    if (!selectedSubject) {
+        console.log("No subject selected, showing notification");
+        // Show visible notification message below subject selection
+        let notification = document.querySelector(".subject-notification");
+        if (!notification) {
+            notification = document.createElement("div");
+            notification.className = "subject-notification";
+            // Add inline styles for debugging visibility
+            notification.style.cssText = "color: white; background-color: #ff0000; margin-top: 5px; font-weight: bold; padding: 10px; border-radius: 5px; border: 2px solid #cc0000; max-width: 300px;";
+            // Insert notification inside welcome_message after subjectSelect
+            const welcomeMessage = document.querySelector('.welcome_message');
+            if (welcomeMessage && subjectSelect) {
+                welcomeMessage.insertBefore(notification, subjectSelect.nextSibling);
+            } else if (subjectSelect) {
+                subjectSelect.insertAdjacentElement('afterend', notification);
+            }
+        }
+        notification.textContent = "Please select a subject before starting the quiz.";
+        return;
+    }
+    // Remove notification if present
+    let notification = document.querySelector(".subject-notification");
+    if (notification) {
+        notification.remove();
+    }
+    loadQuizForSubject(selectedSubject);
+    info_box.classList.add("activeInfo"); // Show info box
+
+    // Hide subject selection dropdown and label after starting quiz
+    const subjectLabel = document.querySelector('label[for="subjectSelect"]');
+    if (subjectLabel) subjectLabel.style.display = 'none';
+    if (subjectSelect) subjectSelect.style.display = 'none';
+});
+
+updateWelcomeTitle(selectedSubject);
+
+/* Rest of the code remains unchanged */
+let start_btn = document.querySelector(".start_btn button");
+let info_box = document.querySelector(".info_box");
+let exit_btn = info_box.querySelector(".buttons .quit");
+let continue_btn = info_box.querySelector(".buttons .restart");
+let quiz_box = document.querySelector(".quiz_box");
+let result_box = document.querySelector(".result_box");
 let option_list; // Declare option_list in a broader scope
 let bottom_ques_counter; // Declare bottom_ques_counter in a broader scope
 let next_btn; // Declare next_btn in a broader scope
@@ -45,28 +242,46 @@ function initializeQuiz() {
     result_box = document.querySelector(".result_box");
     option_list = document.querySelector(".option_list"); // Initialize option_list here
     bottom_ques_counter = document.querySelector("footer .total_que"); // Initialize bottom_ques_counter here
-    next_btn = document.querySelector("footer .next_btn");// Initialize  next_btn  here
+    next_btn = document.querySelector("footer .next_btn"); // Initialize next_btn here
     time_line = document.querySelector("header .time_line");
     timeText = document.querySelector(".timer .time_left_txt");
     timeCount = document.querySelector(".timer .timer_sec");
 
-    // Event listeners for buttons
-    start_btn.onclick = () => {
-        info_box.classList.add("activeInfo"); // Show info box
-    };
+// Event listeners for buttons
+start_btn.onclick = () => {
+    info_box.classList.add("activeInfo"); // Show info box
+};
 
-    exit_btn.onclick = () => {
-        info_box.classList.remove("activeInfo"); // Hide info box
-    };
+// Quit button in info box (exit quiz before starting)
+exit_btn.onclick = () => {
+    info_box.classList.remove("activeInfo"); // Hide info box
 
-    continue_btn.onclick = () => {
-        info_box.classList.remove("activeInfo"); // Hide info box
-        quiz_box.classList.add("activeQuiz"); // Show quiz box
-        showQuestions(0); // Calling showQuestions function
-        queCounter(1); // Passing 1 parameter to queCounter
-        startTimer(120); // Calling startTimer function
-        startTimerLine(0); // Calling startTimerLine function
-    };
+    // Show welcome message container
+    const welcomeMessage = document.querySelector('.welcome_message');
+    if (welcomeMessage) welcomeMessage.style.display = 'block';
+
+    // Show subject selection dropdown and label by removing inline display style
+    const subjectLabel = document.querySelector('label[for="subjectSelect"]');
+    if (subjectLabel) subjectLabel.style.display = '';
+    if (subjectSelect) subjectSelect.style.display = '';
+
+    // Reset subject selection dropdown to placeholder
+    subjectSelect.value = "";
+    selectedSubject = "";
+    updateWelcomeTitle(selectedSubject);
+
+    // Enable start button if disabled
+    startBtn.disabled = true;
+};
+
+continue_btn.onclick = () => {
+    info_box.classList.remove("activeInfo"); // Hide info box
+    quiz_box.classList.add("activeQuiz"); // Show quiz box
+    showQuestions(0); // Calling showQuestions function
+    queCounter(1); // Passing 1 parameter to queCounter
+    startTimer(120); // Calling startTimer function
+    startTimerLine(0); // Calling startTimerLine function
+};
 
     const restart_quiz = result_box.querySelector(".buttons .restart");
     const quit_quiz = result_box.querySelector(".buttons .quit");
@@ -78,10 +293,33 @@ function initializeQuiz() {
         resetQuiz();
     };
 
-    // Quit quiz
-    quit_quiz.onclick = () => {
-        window.location.reload(); // Reload the current window
-    };
+// Quit quiz
+quit_quiz.onclick = () => {
+    // Reset quiz state variables
+    resetQuiz();
+
+    // Hide quiz and result boxes
+    quiz_box.classList.remove("activeQuiz");
+    result_box.classList.remove("activeResult");
+    info_box.classList.remove("activeInfo");
+
+    // Show welcome message container
+    const welcomeMessage = document.querySelector('.welcome_message');
+    if (welcomeMessage) welcomeMessage.style.display = 'block';
+
+    // Show subject selection dropdown and label by removing inline display style
+    const subjectLabel = document.querySelector('label[for="subjectSelect"]');
+    if (subjectLabel) subjectLabel.style.display = '';
+    if (subjectSelect) subjectSelect.style.display = '';
+
+    // Reset subject selection dropdown to placeholder
+    subjectSelect.value = "";
+    selectedSubject = "";
+    updateWelcomeTitle(selectedSubject);
+
+    // Enable start button if disabled
+    startBtn.disabled = true;
+};
 
     // Next question button
     next_btn.onclick = () => {
@@ -104,7 +342,7 @@ function initializeQuiz() {
     };
 }
 
-let timeValue = 120;
+let timeValue = 60;
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
@@ -114,7 +352,7 @@ let widthValue = 0;
 
 // Reset quiz function
 function resetQuiz() {
-    timeValue = 120;
+    timeValue = 60;
     que_count = 0;
     que_numb = 1;
     userScore = 0;
@@ -179,7 +417,7 @@ function optionSelected(answer) {
         }
     }
     for (let i = 0; i < allOptions; i++) {
-        option_list.children[i].classList.add("disabled"); // Once user select an option then disable all options
+        option_list.children[i].classList.add("disabled"); // Once user selects an option then disable all options
     }
     next_btn.classList.add("show"); // Show the next button if user selected any option
 }
@@ -223,7 +461,7 @@ function startTimer(time) {
                 }
             }
             for (let i = 0; i < allOptions; i++) {
-                option_list.children[i].classList.add("disabled"); // Once user select an option then disable all options
+                option_list.children[i].classList.add("disabled"); // Once user selects an option then disable all options
             }
             next_btn.classList.add("show"); // Show the next button if user selected any option
         }
