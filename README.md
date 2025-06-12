@@ -1,1 +1,1 @@
-IQuiz-App-Vanila-JS - Year 7 Quiz 
+ Quiz app - Questions based on Curriculum for Year 7 - [Live link](https://ks3-y7.onrender.com/)
