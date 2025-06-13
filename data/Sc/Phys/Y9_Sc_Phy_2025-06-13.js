@@ -30,7 +30,7 @@ let questions = [
       options: [
         "The object remains at rest",
         "The object moves at constant speed",
-        "The object will accelerate",
+        "The object will accelerate in the direction of the resultant force.",
         "The object will decelerate"
       ]
     },
@@ -41,7 +41,7 @@ let questions = [
       options: [
         "The motion of an object in a vacuum",
         "The motion of an object in a straight line",
-        "The motion of an object as observed from a specific point",
+        "The motion of an object as observed from a particular frame of reference.",
         "The motion of an object under the influence of gravity"
       ]
     },
@@ -62,7 +62,7 @@ let questions = [
       answer: "By analyzing the slope and shape of the graph.",
       options: [
         "By measuring the height of the graph",
-        "By analyzing the slope and shape",
+        "By analyzing the slope and shape of the graph.",
         "By counting the number of points",
         "By looking at the color of the graph"
       ]
@@ -74,7 +74,7 @@ let questions = [
       options: [
         "By finding the area under the graph",
         "By measuring the height of the graph",
-        "By calculating the slope of the graph",
+        "Speed is calculated as the slope of the graph.",
         "By counting the time intervals"
       ]
     },
@@ -85,7 +85,7 @@ let questions = [
       options: [
         "Mass is weight divided by gravity",
         "Weight is mass multiplied by gravity",
-        "Mass and weight are the same",
+        "Mass is the amount of matter in an object, while weight is the force of gravity acting on that mass.",
         "Weight is independent of gravity"
       ]
     },
@@ -96,7 +96,7 @@ let questions = [
       options: [
         "Gravity decreases with mass",
         "Gravity is constant regardless of mass",
-        "Gravity increases with greater mass",
+        "Gravity increases with greater mass.",
         "Gravity is only affected by distance"
       ]
     },
