@@ -78,7 +78,7 @@ let questions = [
       "Keep it in storage indefinitely"
     ]
   }
-];
+]
 
   
   export { questions };
