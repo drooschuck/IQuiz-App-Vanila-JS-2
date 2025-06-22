@@ -1,175 +1,127 @@
-
- export let quizSubject = "Phy5 - Earth";
+export const quizSubject = "Phy1 - Motion";
 
 let questions = [
     {
       numb: 1,
-      question: "What are the layers of the Earth?",
-      answer: "Crust, mantle, outer core, inner core.",
+      question: "What do forces do?",
+      answer: "Forces cause objects to accelerate, decelerate, or change direction.",
       options: [
-        "Crust, mantle, outer core, inner core.",
-        "Crust, lithosphere, asthenosphere, core.",
-        "Crust, mantle, core.",
-        "Crust, mantle, outer shell, inner shell."
+        "They only push objects",
+        "Forces cause objects to accelerate, decelerate, or change direction.",
+        "They have no effect on motion",
+        "They only pull objects"
       ]
     },
     {
       numb: 2,
-      question: "How do the properties of the Earth's layers compare?",
-      answer: "The crust is solid and thin, the mantle is semi-solid and thick, the outer core is liquid, and the inner core is solid and very hot.",
+      question: "What is the resultant force when two equal forces act in opposite directions?",
+      answer: "Zero",
       options: [
-        "All layers are solid.",
-        "The crust is the thickest layer.",
-        "The outer core is solid.",
-        "The crust is thin and solid, the mantle is thick and semi-solid, the outer core is liquid, and the inner core is solid."
+        "Equal to the sum of the forces",
+        "Zero",
+        "Equal to the difference of the forces",
+        "Double the force"
       ]
     },
     {
       numb: 3,
-      question: "What is the structure of the Universe in order of size?",
-      answer: "Solar system, galaxy, universe.",
+      question: "What happens when the resultant force is not zero?",
+      answer: "The object will accelerate in the direction of the resultant force.",
       options: [
-        "Galaxy, solar system, universe.",
-        "Solar system, universe, galaxy.",
-        "Solar system, galaxy, universe.",
-        "Universe, galaxy, solar system."
+        "The object remains at rest",
+        "The object moves at constant speed",
+        "The object will accelerate in the direction of the resultant force.",
+        "The object will decelerate"
       ]
     },
     {
       numb: 4,
-      question: "What are some objects seen in the night sky?",
-      answer: "Stars, planets, the Moon, and constellations.",
+      question: "What is relative motion?",
+      answer: "The motion of an object as observed from a particular frame of reference.",
       options: [
-        "Only stars.",
-        "Stars, planets, the Moon, and constellations.",
-        "Only the Moon.",
-        "Only planets."
+        "The motion of an object in a vacuum",
+        "The motion of an object in a straight line",
+        "The motion of an object as observed from a particular frame of reference.",
+        "The motion of an object under the influence of gravity"
       ]
     },
     {
       numb: 5,
-      question: "What unit do astronomers use to measure distance in space?",
-      answer: "Light-year.",
+      question: "Which equipment is commonly used to measure time?",
+      answer: "Stopwatch",
       options: [
-        "Kilometer.",
-        "Mile.",
-        "Light-year.",
-        "Astronomical unit."
+        "Thermometer",
+        "Barometer",
+        "Stopwatch",
+        "Ruler"
       ]
     },
     {
       numb: 6,
-      question: "How are objects in the Solar System arranged?",
-      answer: "Planets orbit the Sun, with moons orbiting the planets.",
+      question: "How can you describe a journey using a distance-time graph?",
+      answer: "By analyzing the slope and shape of the graph.",
       options: [
-        "All objects are randomly placed.",
-        "Planets orbit the Sun, with moons orbiting the planets.",
-        "The Sun orbits the Earth.",
-        "Moons orbit the Sun directly."
+        "By measuring the height of the graph",
+        "By analyzing the slope and shape of the graph.",
+        "By counting the number of points",
+        "By looking at the color of the graph"
       ]
     },
     {
       numb: 7,
-      question: "What patterns can be identified in the Solar System?",
-      answer: "Planets orbit in the same direction and lie in a flat plane.",
+      question: "How do you calculate speed from a distance-time graph?",
+      answer: "Speed is calculated as the slope of the graph.",
       options: [
-        "Planets orbit in random directions.",
-        "All planets are the same size.",
-        "Planets orbit in the same direction and lie in a flat plane.",
-        "Moons do not orbit planets."
+        "By finding the area under the graph",
+        "By measuring the height of the graph",
+        "Speed is calculated as the slope of the graph.",
+        "By counting the time intervals"
       ]
     },
     {
       numb: 8,
-      question: "Why do we see objects in the Solar System, and how do they appear to move?",
-      answer: "We see them because they reflect sunlight, and they appear to move due to the rotation of the Earth.",
+      question: "What is the difference between mass and weight?",
+      answer: "Mass is the amount of matter in an object, while weight is the force of gravity acting on that mass.",
       options: [
-        "They emit their own light.",
-        "They are always stationary.",
-        "They reflect sunlight and appear to move due to Earth's rotation.",
-        "They are invisible."
+        "Mass is weight divided by gravity",
+        "Weight is mass multiplied by gravity",
+        "Mass and weight are the same",
+        "Mass is the amount of matter in an object, while weight is the force of gravity acting on that mass."
       ]
     },
     {
       numb: 9,
-      question: "What causes the differences between seasons?",
-      answer: "The tilt of the Earth's axis and its orbit around the Sun.",
+      question: "How does gravity vary with mass?",
+      answer: "Gravity increases with greater mass.",
       options: [
-        "The distance from the Sun only.",
-        "The tilt of the Earth's axis and its orbit around the Sun.",
-        "The rotation of the Earth.",
-        "The phases of the Moon."
+        "Gravity decreases with mass",
+        "Gravity is constant regardless of mass",
+        "Gravity increases with greater mass.",
+        "Gravity is only affected by distance"
       ]
     },
     {
       numb: 10,
-      question: "How do the Sun, stars, and Moon appear to move across the sky?",
-      answer: "They appear to move from east to west due to the rotation of the Earth.",
+      question: "What force holds planets and moons in orbit around larger bodies?",
+      answer: "Gravity",
       options: [
-        "They move randomly.",
-        "They appear to move from east to west due to Earth's rotation.",
-        "They do not move at all.",
-        "They move from west to east."
+        "Friction",
+        "Magnetism",
+        "Gravity",
+        "Inertia"
       ]
     },
     {
       numb: 11,
-      question: "What patterns link day length during the year?",
-      answer: "Day length varies with the seasons due to the tilt of the Earth's axis.",
+      question: "What is the formula for weight?",
+      answer: "Weight = mass * g",
       options: [
-        "Day length is constant throughout the year.",
-        "Day length varies with the seasons due to Earth's tilt.",
-        "Day length is longer in winter.",
-        "Day length is shorter in summer."
-      ]
-    },
-    {
-      numb: 12,
-      question: "Why do seasonal changes happen?",
-      answer: "Due to the tilt of the Earth's axis and its orbit around the Sun.",
-      options: [
-        "Due to the distance from the Moon.",
-        "Due to the tilt of the Earth's axis and its orbit around the Sun.",
-        "Due to the rotation of the Earth.",
-        "Due to the phases of the Moon."
-      ]
-    },
-    {
-      numb: 13,
-      question: "What are the phases of the Moon?",
-      answer: "The different appearances of the Moon as it orbits the Earth, including new moon, crescent, first quarter, gibbous, and full moon.",
-      options: [
-        "The Moon has only one phase.",
-        "The phases are caused by the Earth's shadow.",
-        "The different appearances of the Moon as it orbits the Earth.",
-        "The Moon changes color."
-      ]
-    },
-    {
-      numb: 14,
-      question: "How does the Moon appear from diagrams of the Earth, Sun, and Moon?",
-      answer: "The Moon's appearance changes based on its position relative to the Earth and Sun.",
-      options: [
-        "The Moon always appears the same.",
-        "The Moon's appearance changes based on its position relative to the Earth and Sun.",
-        "The Moon is always dark.",
-        "The Moon is always bright."
-      ]
-    },
-    {
-      numb: 15,
-      question: "How are total eclipses linked to phases of the Moon?",
-      answer: "A total eclipse occurs when the Moon is directly between the Earth and the Sun during a new moon phase.",
-      options: [
-        "Total eclipses happen during a full moon.",
-        "Total eclipses occur when the Moon is directly between the Earth and the Sun during a new moon.",
-        "Total eclipses happen when the Earth is between the Sun and Moon.",
-        "Total eclipses are unrelated to the Moon's phases."
+        "Weight = mass + g",
+        "Weight = mass * velocity",
+        "Weight = mass * g",
+        "Weight = mass / g"
       ]
     }
-];
+]
 
 export { questions };
-
-
-

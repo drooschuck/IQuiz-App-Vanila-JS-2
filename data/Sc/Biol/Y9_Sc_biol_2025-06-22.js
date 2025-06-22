@@ -1,171 +1,149 @@
-export let quizSubject = "Bio4 - Human reproduction";
+export const quizSubject = "Bio5 - Variation";
 
 let questions = [
     {
         numb: 1,
-        question: "What are some changes that occur in boys during puberty?",
-        answer: "Increased muscle mass, deepening of the voice, and growth of facial hair.",
+        question: "What is meant by the term variation?",
+        answer: "The differences in characteristics between individuals of the same species.",
         options: [
-            "Increased muscle mass, deepening of the voice, and growth of facial hair.",
-            "Menstruation and breast development.",
-            "Decreased height and weight.",
-            "Loss of body hair."
+            "The similarities between individuals of different species.",
+            "The differences in characteristics between individuals of the same species.",
+            "The changes in environment over time.",
+            "The process of evolution."
         ]
     },
     {
         numb: 2,
-        question: "What are the main changes that take place during puberty?",
-        answer: "Physical growth, development of secondary sexual characteristics, and emotional changes.",
+        question: "How does variation in species occur?",
+        answer: "Through inherited traits and environmental influences.",
         options: [
-            "Physical growth, development of secondary sexual characteristics, and emotional changes.",
-            "Decrease in height and weight.",
-            "Loss of interest in social activities.",
-            "No changes occur."
+            "Only through inherited traits.",
+            "Only through environmental influences.",
+            "Through inherited traits and environmental influences.",
+            "Variation does not occur in species."
         ]
     },
     {
         numb: 3,
-        question: "Categorize the following as physical or emotional changes during adolescence: mood swings, growth spurts, acne.",
-        answer: "Mood swings - emotional; growth spurts - physical; acne - physical.",
+        question: "How does variation give rise to different species?",
+        answer: "It allows for adaptations that can lead to speciation over time.",
         options: [
-            "Mood swings - physical; growth spurts - emotional; acne - emotional.",
-            "Mood swings - emotional; growth spurts - physical; acne - physical.",
-            "Mood swings - physical; growth spurts - physical; acne - emotional.",
-            "Mood swings - emotional; growth spurts - emotional; acne - physical."
+            "It prevents adaptation.",
+            "It allows for adaptations that can lead to speciation over time.",
+            "It has no effect on species.",
+            "It only affects individual organisms."
         ]
     },
     {
         numb: 4,
-        question: "What are the main structures of the male reproductive system?",
-        answer: "Testes, vas deferens, prostate gland, and penis.",
+        question: "What are the two types of variation?",
+        answer: "Continuous and discontinuous variation.",
         options: [
-            "Ovaries, fallopian tubes, uterus, and vagina.",
-            "Testes, vas deferens, prostate gland, and penis.",
-            "Urethra, cervix, and clitoris.",
-            "Semen, eggs, and hormones."
+            "Genetic and environmental variation.",
+            "Continuous and discontinuous variation.",
+            "Physical and behavioral variation.",
+            "Inherited and acquired variation."
         ]
     },
     {
         numb: 5,
-        question: "What is the function of the ovaries in the female reproductive system?",
-        answer: "To produce eggs (ova) and hormones.",
+        question: "What is the difference between continuous and discontinuous variation?",
+        answer: "Continuous variation can take any value within a range, while discontinuous variation has distinct categories.",
         options: [
-            "To transport sperm.",
-            "To produce eggs (ova) and hormones.",
-            "To support the fetus.",
-            "To regulate the menstrual cycle."
+            "Continuous variation has distinct categories, while discontinuous variation can take any value.",
+            "Continuous variation can take any value within a range, while discontinuous variation has distinct categories.",
+            "There is no difference.",
+            "Both types are the same."
         ]
     },
     {
         numb: 6,
-        question: "How are the structures of the male reproductive system adapted for their function?",
-        answer: "The testes are located outside the body to maintain a lower temperature for sperm production.",
+        question: "What causes continuous variation?",
+        answer: "It is often caused by multiple genes and environmental factors.",
         options: [
-            "The penis is long to reach the ovaries.",
-            "The testes are located outside the body to maintain a lower temperature for sperm production.",
-            "The prostate gland produces milk.",
-            "The vas deferens is very short."
+            "It is caused by a single gene.",
+            "It is often caused by multiple genes and environmental factors.",
+            "It is only caused by environmental factors.",
+            "It is caused by mutations."
         ]
     },
     {
         numb: 7,
-        question: "What is the average length of the menstrual cycle?",
-        answer: "Approximately 28 days.",
+        question: "How can you identify continuous and discontinuous data from a table?",
+        answer: "Continuous data shows a range of values, while discontinuous data shows distinct categories.",
         options: [
-            "14 days.",
-            "28 days.",
-            "35 days.",
-            "21 days."
+            "Continuous data shows distinct categories, while discontinuous data shows a range of values.",
+            "Continuous data shows a range of values, while discontinuous data shows distinct categories.",
+            "Both types are the same.",
+            "Data cannot be categorized."
         ]
     },
     {
         numb: 8,
-        question: "What are the stages of the menstrual cycle?",
-        answer: "Menstrual phase, follicular phase, ovulation, and luteal phase.",
+        question: "What type of graph should be drawn for continuous data?",
+        answer: "A line graph.",
         options: [
-            "Menstrual phase, ovulation, fertilization, and implantation.",
-            "Menstrual phase, follicular phase, ovulation, and luteal phase.",
-            "Ovulation, fertilization, gestation, and birth.",
-            "Menstrual phase, pregnancy, and birth."
+            "A pie chart.",
+            "A bar chart.",
+            "A line graph.",
+            "A scatter plot."
         ]
     },
     {
         numb: 9,
-        question: "How do contraception methods work?",
-        answer: "They prevent fertilization or implantation of the fertilized egg.",
+        question: "Name an example of an environmental change.",
+        answer: "Climate change.",
         options: [
-            "They increase fertility.",
-            "They prevent fertilization or implantation of the fertilized egg.",
-            "They enhance ovulation.",
-            "They have no effect on reproduction."
+            "Genetic mutation.",
+            "Climate change.",
+            "Natural selection.",
+            "Species extinction."
         ]
     },
     {
         numb: 10,
-        question: "What is meant by fertilization?",
-        answer: "The fusion of a sperm cell with an egg cell to form a zygote.",
+        question: "How are animals adapted to their environments?",
+        answer: "Through physical traits and behaviors that enhance survival.",
         options: [
-            "The growth of the fetus.",
-            "The fusion of a sperm cell with an egg cell to form a zygote.",
-            "The process of menstruation.",
-            "The implantation of the embryo."
+            "By changing their environment.",
+            "Through physical traits and behaviors that enhance survival.",
+            "By migrating to different areas.",
+            "By competing with other species."
         ]
     },
     {
         numb: 11,
-        question: "Where does fertilization and implantation occur in the body?",
-        answer: "Fertilization occurs in the fallopian tubes, and implantation occurs in the uterus.",
+        question: "How can competition or long-term environmental change lead to evolutionary adaptation?",
+        answer: "It can favor individuals with advantageous traits, leading to changes in the population over time.",
         options: [
-            "In the ovaries.",
-            "In the fallopian tubes for fertilization and in the uterus for implantation.",
-            "In the cervix.",
-            "In the vagina."
+            "It has no effect on evolution.",
+            "It can favor individuals with advantageous traits, leading to changes in the population over time.",
+            "It only affects individual organisms.",
+            "It leads to extinction of all species."
         ]
     },
     {
         numb: 12,
-        question: "What are some causes of infertility?",
-        answer: "Hormonal imbalances, blocked fallopian tubes, and low sperm count.",
+        question: "Describe how plants are adapted to their environments.",
+        answer: "Plants have adaptations such as deep roots, waxy leaves, or specialized structures for water retention.",
         options: [
-            "Hormonal imbalances, blocked fallopian tubes, and low sperm count.",
-            "High exercise levels.",
-            "Eating too much fruit.",
-            "Having a regular menstrual cycle."
+            "Plants do not adapt to their environments.",
+            "Plants have adaptations such as deep roots, waxy leaves, or specialized structures for water retention.",
+            "Plants only grow in specific environments.",
+            "Plants adapt by changing their color."
         ]
     },
     {
         numb: 13,
-        question: "What is the definition of gestation?",
-        answer: "The period of development of the fetus in the womb.",
+        question: "Explain how long-term environmental change can lead to extinction.",
+        answer: "If species cannot adapt to changing conditions, they may not survive, leading to extinction.",
         options: [
-            "The time from fertilization to birth.",
-            "The period of development of the fetus in the womb.",
-            "The time of menstruation.",
-            "The time of ovulation."
-        ]
-    },
-    {
-        numb: 14,
-        question: "What happens during gestation and birth?",
-        answer: "The fetus develops in the uterus, and during birth, the baby is delivered through the birth canal.",
-        options: [
-            "The fetus develops in the ovaries.",
-            "The fetus develops in the uterus, and during birth, the baby is delivered through the birth canal.",
-            "The fetus is expelled from the body without development.",
-            "The baby is born through the abdomen."
-        ]
-    },
-    {
-        numb: 15,
-        question: "How do cigarettes, alcohol, or drugs affect the developing fetus?",
-        answer: "They can cause developmental issues, low birth weight, and other health problems.",
-        options: [
-            "They have no effect.",
-            "They can cause developmental issues, low birth weight, and other health problems.",
-            "They improve fetal health.",
-            "They only affect the mother."
+            "All species will survive any change.",
+            "If species cannot adapt to changing conditions, they may not survive, leading to extinction.",
+            "Extinction is unrelated to environmental change.",
+            "Species will always find a way to adapt."
         ]
     }
-];
+]
 
 export { questions };

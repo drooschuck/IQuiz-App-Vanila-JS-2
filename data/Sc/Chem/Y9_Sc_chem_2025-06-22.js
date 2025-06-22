@@ -1,116 +1,116 @@
-export const quizSubject = "Chem5 - Separating mixtures";
+export let quizSubject = "Chem1 - Intro to Energy";
 
 let questions = [
     {
       numb: 1,
-      question: "What is a mixture?",
-      answer: "A combination of two or more substances that are not chemically bonded",
+      question: "What is the main source of energy contained in food?",
+      answer: "Chemical energy",
       options: [
-        "A pure substance with a fixed composition",
-        "A combination of two or more substances that are not chemically bonded",
-        "A single element",
-        "A compound formed by chemical reactions"
+        "Thermal energy",
+        "Chemical energy",
+        "Kinetic energy",
+        "Electrical energy"
       ]
     },
     {
       numb: 2,
-      question: "Which of the following is an example of a mixture?",
-      answer: "Saltwater",
+      question: "Which of the following is a renewable energy resource commonly used to generate electricity?",
+      answer: "Wind power",
       options: [
-        "Oxygen gas",
-        "Saltwater",
-        "Sodium chloride (NaCl)",
-        "Pure water"
+        "Coal",
+        "Natural gas",
+        "Wind power",
+        "Oil"
       ]
     },
     {
       numb: 3,
-      question: "How can the purity of a substance be assessed using temperature change data?",
-      answer: "By observing the melting or boiling point compared to known values",
+      question: "What is the definition of power in physics?",
+      answer: "The rate of energy transfer or work done",
       options: [
-        "By measuring the color change",
-        "By observing the melting or boiling point compared to known values",
-        "By checking the solubility",
-        "By weighing the substance"
+        "The total amount of energy used",
+        "The stored energy in an object",
+        "The rate of energy transfer or work done",
+        "The pressure exerted by energy"
       ]
     },
     {
       numb: 4,
-      question: "What happens to soluble substances when they dissolve?",
-      answer: "They break into smaller particles and mix with the solvent",
+      question: "If a household uses 500 kWh of energy and the cost per kWh is $0.12, what is the total cost?",
+      answer: "$60",
       options: [
-        "They remain unchanged",
-        "They break into smaller particles and mix with the solvent",
-        "They form a new substance",
-        "They float on the surface"
+        "$42",
+        "$60",
+        "$500",
+        "$120"
       ]
     },
     {
       numb: 5,
-      question: "What is the relationship between solutes, solvents, and solutions?",
-      answer: "A solute is dissolved in a solvent to form a solution",
+      question: "Which statement best describes the law of energy conservation?",
+      answer: "Energy cannot be created or destroyed, only transformed",
       options: [
-        "A solvent is dissolved in a solute to form a solution",
-        "A solute is dissolved in a solvent to form a solution",
-        "A solution is a mixture of two solutes",
-        "A solute and solvent are the same"
+        "Energy can be created but not destroyed",
+        "Energy can be destroyed but not created",
+        "Energy cannot be created or destroyed, only transformed",
+        "Energy disappears after being used"
       ]
     },
     {
       numb: 6,
-      question: "Why can mixtures be separated?",
-      answer: "Due to differences in their physical properties",
+      question: "Which of the following is NOT a common energy store?",
+      answer: "Sound energy store",
       options: [
-        "Due to chemical reactions",
-        "Due to differences in their physical properties",
-        "Because they are pure substances",
-        "Because they are all liquids"
+        "Kinetic energy store",
+        "Chemical energy store",
+        "Gravitational potential energy store",
+        "Sound energy store"
       ]
     },
     {
       numb: 7,
-      question: "What is the process of filtration used for?",
-      answer: "To separate solids from liquids or gases using a barrier",
+      question: "How is energy most commonly transferred in an electric circuit?",
+      answer: "By electrical current",
       options: [
-        "To dissolve substances",
-        "To separate solids from liquids or gases using a barrier",
-        "To evaporate liquids",
-        "To mix two substances"
+        "By radiation",
+        "By electrical current",
+        "By heating the wires",
+        "By gravitational force"
       ]
     },
     {
       numb: 8,
-      question: "How does filtration work?",
-      answer: "It allows smaller particles to pass through while retaining larger particles",
+      question: "What does it mean when energy is dissipated?",
+      answer: "Energy is spread out and becomes less useful",
       options: [
-        "It dissolves all substances",
-        "It allows smaller particles to pass through while retaining larger particles",
-        "It heats the mixture",
-        "It combines the substances"
+        "Energy is stored for later use",
+        "Energy is focused and concentrated",
+        "Energy is spread out and becomes less useful",
+        "Energy is created from nothing"
       ]
     },
     {
       numb: 9,
-      question: "What is crystallization used for?",
-      answer: "To separate a dissolved solid from a solution",
+      question: "A machine transfers 200 J of energy but 50 J is wasted as heat. What is its efficiency?",
+      answer: "75%",
       options: [
-        "To mix two liquids",
-        "To separate a dissolved solid from a solution",
-        "To create a gas",
-        "To change the temperature of a solution"
+        "25%",
+        "50%",
+        "75%",
+        "100%"
       ]
     },
     {
       numb: 10,
-      question: "What is chromatography used for?",
-      answer: "To separate components of a mixture based on their movement through a medium",
+      question: "Which factor affects the amount of energy required in different situations?",
+      answer: "The work done or change in energy state",
       options: [
-        "To dissolve solids",
-        "To separate components of a mixture based on their movement through a medium",
-        "To measure temperature changes",
-        "To filter liquids"
+        "The color of the object",
+        "The temperature alone",
+        "The work done or change in energy state",
+        "The size of the object only"
       ]
     }
-];
+]
 
 export { questions };

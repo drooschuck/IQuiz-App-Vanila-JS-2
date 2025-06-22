@@ -1,116 +1,118 @@
-export let quizSubject = "PT5 - A Monster Calls";
+
+export let quizSubject = "PT1 - Reading, Letters";
 
 let questions = [
     {
       numb: 1,
-      question: "What is a key component of a graphic novel?",
-      answer: "Combination of visual art and text to tell a story.",
+      question: "Which book features the story of a young girl in Afghanistan who disguises herself as a boy to support her family?",
+      answer: "The Breadwinner",
       options: [
-        "Only text with no images.",
-        "Combination of visual art and text to tell a story.",
-        "A traditional novel format.",
-        "Only illustrations with no text."
+        "Private Peaceful",
+        "The Breadwinner",
+        "Reading Letters",
+        "Persuasive Writing"
       ]
     },
     {
       numb: 2,
-      question: "How are elements of classical mythology used in 'A Monster Calls'?",
-      answer: "They present symbolic meanings within the modern narrative.",
+      question: "In 'Private Peaceful,' what is the main theme explored in the story?",
+      answer: "The impact of war on a family",
       options: [
-        "They are ignored.",
-        "They are presented literally.",
-        "They present symbolic meanings within the modern narrative.",
-        "They are the main plot."
+        "The impact of war on a family",
+        "A journey of self-discovery",
+        "Persuasive writing techniques",
+        "Learning to read letters"
       ]
     },
     {
       numb: 3,
-      question: "What does character progression in a text usually show?",
-      answer: "How a character changes and develops throughout the story.",
+      question: "Which oracy skill helps students improve their verbal expression and thinking skills?",
+      answer: "Reading and discussion",
       options: [
-        "How a character remains the same.",
-        "How a character changes and develops throughout the story.",
-        "Only their physical appearance.",
-        "How a character disappears."
+        "Silent reading",
+        "Writing skills",
+        "Reading and discussion",
+        "Memorizing vocabulary"
       ]
     },
     {
       numb: 4,
-      question: "What can inferences about motifs help a reader understand?",
-      answer: "Recurring ideas that support the themes of a text.",
+      question: "What is a key skill taught in the persuasive writing unit?",
+      answer: "Using a range of persuasive methods to persuade the reader",
       options: [
-        "Random details.",
-        "Recurring ideas that support the themes of a text.",
-        "Only the main character’s name.",
-        "The setting only."
+        "Writing fictional stories",
+        "Describing characters",
+        "Using a range of persuasive methods to persuade the reader",
+        "Improving grammar"
       ]
     },
     {
       numb: 5,
-      question: "What theme is central to 'A Monster Calls'?",
-      answer: "Dealing with grief and loss.",
+      question: "What task helps students develop their oracy skills in the English unit?",
+      answer: "Oracy tasks focused on verbal expression and thinking",
       options: [
-        "Adventure and excitement.",
-        "Dealing with grief and loss.",
-        "Romantic love.",
-        "Sports and competition."
+        "Writing essays",
+        "Oracy tasks focused on verbal expression and thinking",
+        "Reading silently",
+        "Memorizing poems"
       ]
     },
     {
       numb: 6,
-      question: "How do the visuals in a graphic novel affect the reader's experience?",
-      answer: "They provide emotional depth and context beyond text alone.",
+      question: "In 'Private Peaceful,' who is the narrator telling the story?",
+      answer: "Tommo",
       options: [
-        "They confuse the story.",
-        "They provide emotional depth and context beyond text alone.",
-        "They are decorative only.",
-        "They replace the text."
+        "Sergeant Major",
+        "Tommo",
+        "Parvati",
+        "Nur"
       ]
     },
     {
       numb: 7,
-      question: "Which classical mythological figure is represented by the monster in 'A Monster Calls'?",
-      answer: "The Yew tree spirit.",
+      question: "Which persuasive method involves appealing to the reader's emotions?",
+      answer: "Emotive language",
       options: [
-        "The Minotaur.",
-        "The Yew tree spirit.",
-        "Zeus.",
-        "Medusa."
+        "Emotive language",
+        "Statistics",
+        "Rhetorical questions",
+        "Facts and evidence"
       ]
     },
     {
       numb: 8,
-      question: "What does making inferences about character help the reader do?",
-      answer: "Understand the character’s motives and feelings not directly stated.",
+      question: "What is one benefit of engaging in oracy tasks?",
+      answer: "Improves verbal expression and critical thinking",
       options: [
-        "Only remember their name.",
-        "Understand the character’s motives and feelings not directly stated.",
-        "Ignore their actions.",
-        "Predict the ending only."
+        "Improves handwriting",
+        "Improves verbal expression and critical thinking",
+        "Teaches spelling",
+        "Helps with silent reading"
       ]
     },
     {
       numb: 9,
-      question: "What is a motif?",
-      answer: "A recurring symbol or idea in a text.",
+      question: "Which story highlights the effects of war and family bonds in a rural setting?",
+      answer: "Private Peaceful",
       options: [
-        "A one-time event.",
-        "A recurring symbol or idea in a text.",
-        "A character’s name.",
-        "The story’s setting."
+        "The Breadwinner",
+        "Private Peaceful",
+        "The Hunger Games",
+        "Harry Potter"
       ]
     },
     {
       numb: 10,
-      question: "What makes 'A Monster Calls' unique as a narrative form?",
-      answer: "It blends graphic novel format with classical mythology themes.",
+      question: "When writing to persuade, what is important to include?",
+      answer: "A clear argument and supporting evidence",
       options: [
-        "It is only text-based.",
-        "It is written as a diary.",
-        "It blends graphic novel format with classical mythology themes.",
-        "It is a play."
+        "A clear argument and supporting evidence",
+        "Only opinions",
+        "Random facts",
+        "Unrelated stories"
       ]
     }
-];
-
-export { questions };
+]
+  
+  export { questions }; 
+  

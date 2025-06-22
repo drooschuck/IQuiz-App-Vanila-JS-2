@@ -1,64 +1,52 @@
-export let quizSubject = "CS3 - HTML";
+export let quizSubject = "CS2 - effectively & responsibly";
 
 let questions = [
   {
     numb: 1,
-    question: "Which HTML tag is used to define the title of a web page shown in the browser tab?",
-    answer: "<title>",
+    question: "Which of the following is a good practice to minimise the risk of your computer being infected by a virus?",
+    answer: "Install and regularly update antivirus software",
     options: [
-      "<head>",
-      "<title>",
-      "<body>",
-      "<header>"
+      "Click on all pop-up ads",
+      "Install and regularly update antivirus software",
+      "Download files from unknown sources",
+      "Disable computer firewall"
     ]
   },
   {
     numb: 2,
-    question: "What is the correct HTML tag to display a paragraph of text?",
-    answer: "<p>",
+    question: "Why is it important to resize images before attaching them to emails?",
+    answer: "To reduce file size and make sending and downloading faster",
     options: [
-      "<div>",
-      "<p>",
-      "<span>",
-      "<header>"
+      "To improve image quality beyond the original",
+      "To make the email look colorful",
+      "To reduce file size and make sending and downloading faster",
+      "To make the images unreadable"
     ]
   },
   {
     numb: 3,
-    question: "Which tag is used to create a hyperlink in HTML?",
-    answer: "<a>",
+    question: "What is an advantage of using email as a method of communication?",
+    answer: "Allows quick and easy exchange of messages to many recipients",
     options: [
-      "<link>",
-      "<href>",
-      "<a>",
-      "<url>"
+      "It takes a long time to send messages",
+      "Allows quick and easy exchange of messages to many recipients",
+      "It guarantees message privacy",
+      "It is the only way to communicate"
     ]
   },
   {
     numb: 4,
-    question: "What is the minimum required structure for a simple HTML5 webpage?",
-    answer: "<!DOCTYPE html>, <html>, <head>, <title>, <body>",
+    question: "What is a disadvantage of using email as a method of communication?",
+    answer: "Emails can be ignored or lost in spam filters",
     options: [
-      "<html>, <head>, <body>",
-      "<!DOCTYPE html>, <html>, <head>, <title>, <body>",
-      "<html>, <title>, <body>",
-      "<DOCTYPE>, <html>, <body>"
-    ]
-  },
-  {
-    numb: 5,
-    question: "What does this HTML code do? &lt;h1&gt;Welcome to my page&lt;/h1&gt;",
-    answer: "Displays 'Welcome to my page' as a large heading",
-    options: [
-      "Creates a paragraph with text",
-      "Displays 'Welcome to my page' as a large heading",
-      "Inserts an image",
-      "Creates a link to another page"
+      "Emails always reach the recipient immediately",
+      "Emails can be ignored or lost in spam filters",
+      "Emails require no internet connection",
+      "Emails are always secure"
     ]
   }
-];
+]
 
-  
-  export { questions };
+export { questions };
   
   
